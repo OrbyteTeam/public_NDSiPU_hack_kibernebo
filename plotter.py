@@ -5,7 +5,7 @@ from scipy import signal as sig
 
 def oscil(signal, Fs, samples_to_show):
     plt.figure(figsize=(12, 5))
-
+    samples_to_show = int(samples_to_show)
     t = np.arange(samples_to_show) / Fs * 1000  # в миллисекундах
 
     plt.plot(t, signal[:samples_to_show], linewidth=0.8, color='blue')
